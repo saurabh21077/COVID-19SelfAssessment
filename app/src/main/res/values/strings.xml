@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">COVID-19 Self-Assessment</string>
     <string name="activity1_title">Symptom Assessment</string>
+
+    <string name="username">Enter Username</string>
+    <string name="username_placeholder">Enter your name here</string>
+
     <string name="que1">Do you have fever?</string>
     <string name="que2">Do you have runny nose?</string>
     <string name="que3">Do you have scratchy throat?</string>
