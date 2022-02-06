@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 public class Activity2 extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView report;
     private TextView recommendation;
     private Button testingNeeded;
     private User user;
@@ -33,14 +32,35 @@ public class Activity2 extends AppCompatActivity implements View.OnClickListener
 
         setContentView(R.layout.activity_2);
 
-        report = findViewById(R.id.textView6);
-
         user = (User) getIntent().getSerializableExtra("user record");
-        String s = "\n"+user.getUsername()+"\n\n";
+
+        TextView displayForm = (TextView) findViewById(R.id.textView6);
+        displayForm.setText(user.getUsername());
+
         for(Question q : user.getSymptoms()){
-            s = s.concat(q.getQue()+" - "+(q.getAns()?"Yes":"No")+"\n");
+            if(q.getQue().equals(getString(R.string.que1))){
+                displayForm = (TextView) findViewById(R.id.textView8);
+                displayForm.setText(q.getAns()?"Yes":"No");
+            } else if(q.getQue().equals(getString(R.string.que2))){
+                displayForm = (TextView) findViewById(R.id.textView10);
+                displayForm.setText(q.getAns()?"Yes":"No");
+            } else if(q.getQue().equals(getString(R.string.que3))){
+                displayForm = (TextView) findViewById(R.id.textView12);
+                displayForm.setText(q.getAns()?"Yes":"No");
+            } else if(q.getQue().equals(getString(R.string.que4))){
+                displayForm = (TextView) findViewById(R.id.textView14);
+                displayForm.setText(q.getAns()?"Yes":"No");
+            } else if(q.getQue().equals(getString(R.string.que5))){
+                displayForm = (TextView) findViewById(R.id.textView16);
+                displayForm.setText(q.getAns()?"Yes":"No");
+            } else if(q.getQue().equals(getString(R.string.que6))){
+                displayForm = (TextView) findViewById(R.id.textView18);
+                displayForm.setText(q.getAns()?"Yes":"No");
+            } else if(q.getQue().equals(getString(R.string.que7))){
+                displayForm = (TextView) findViewById(R.id.textView20);
+                displayForm.setText(q.getAns()?"Yes":"No");
+            }
         }
-        report.setText(s);
 
         testingNeeded = findViewById(R.id.button2);
         testingNeeded.setOnClickListener((View.OnClickListener) this);

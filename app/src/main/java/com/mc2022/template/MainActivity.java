@@ -96,6 +96,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     ansRadioButton = (RadioButton) findViewById(selectedRadioButtonID);
                     user.getSymptoms().add(new Question(question.getText().toString(), ansRadioButton.getText().toString().equals("Yes")));
                     question.setText(R.string.que5);
+                } else if (question.getText().toString().equals(getString(R.string.que5))) {
+                    ansRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+                    int selectedRadioButtonID = ansRadioGroup.getCheckedRadioButtonId();
+                    ansRadioButton = (RadioButton) findViewById(selectedRadioButtonID);
+                    user.getSymptoms().add(new Question(question.getText().toString(), ansRadioButton.getText().toString().equals("Yes")));
+                    question.setText(R.string.que6);
+                } else if (question.getText().toString().equals(getString(R.string.que6))) {
+                    ansRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+                    int selectedRadioButtonID = ansRadioGroup.getCheckedRadioButtonId();
+                    ansRadioButton = (RadioButton) findViewById(selectedRadioButtonID);
+                    user.getSymptoms().add(new Question(question.getText().toString(), ansRadioButton.getText().toString().equals("Yes")));
+                    question.setText(R.string.que7);
                     next.setText(R.string.button_submit);
                 }
             }
@@ -110,7 +122,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         else if(view.getId() == R.id.button3){
-            user = new User(user.getUsername());
+
+
+            question = (TextView) findViewById(R.id.textView2);
+            question.setText(R.string.username);
+
+            username = (EditText) findViewById(R.id.editTextTextPersonName);
+            username.setVisibility(View.VISIBLE);
+
+            next = (Button) findViewById(R.id.button);
+            next.setText(R.string.button_next);
+
+            clear = (Button) findViewById(R.id.button3);
+            clear.setVisibility(View.GONE);
+
+            ansRadioGroup.setVisibility(View.GONE);
+
+
+            /*user = new User(user.getUsername());
             username.setVisibility(View.GONE);
             question.setText(R.string.que1);
             ansRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
@@ -118,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             next.setText(R.string.button_next);
             clear = (Button) findViewById(R.id.button3);
-            clear.setVisibility(View.VISIBLE);
+            clear.setVisibility(View.VISIBLE);*/
         }
     }
 
@@ -162,6 +191,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             next = (Button) findViewById(R.id.button);
             next.setText(savedState.getString("button"));
 
+            clear = (Button) findViewById(R.id.button3);
+            clear.setVisibility(View.VISIBLE);
             ansRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
             ansRadioButton = (RadioButton) findViewById(savedState.getInt("radio"));
             ansRadioGroup.setVisibility(View.VISIBLE);
