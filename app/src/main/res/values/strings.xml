@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">COVID-19 Self-Assessment</string>
+    <string name="activity1_title">Symptom Assessment</string>
+    <string name="que1">Do you have fever?</string>
+    <string name="que2">Do you have runny nose?</string>
+    <string name="que3">Do you have scratchy throat?</string>
+    <string name="que4">Do you have body ache?</string>
+    <string name="que5">Do you have head ache?</string>
+    <string name="ans1">Yes</string>
+    <string name="ans2">No</string>
+    <string name="button_next">Next</string>
+    <string name="button_submit">Submit</string>
+    <string name="button_clear">Clear</string>
+
+    <string name="activity2_title">Report</string>
+    <string name="form"></string>
+    <string name="button_test_needed">Check if test is needed</string>
+    <string name="selected">List of symptoms</string>
+    <string name="test_needed">You are suggested to get tested!</string>
+    <string name="test_not_needed">No test needed!</string>
+
 </resources>
