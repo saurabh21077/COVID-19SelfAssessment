@@ -1,6 +1,4 @@
-# assignment-0-saurabh21077/ Assignment-1 branch
-assignment-0-saurabh21077 created by GitHub Classroom
-
+# COVID-19 self-assessment application
 ## Problem Statement
 Create a COVID-19 self-assessment android app that allows a user to enter the symptoms that the user is facing. Then the app should say whether the user should get himself/herself checked by conducting RT-PCR. Design in this way: first activity have a form containing TextViews and EditText boxes asking user to enter his/her name, and show a symptom name (Fever), ask the user to select yes or no (have yes and no Button). There is a next button to go the next symptom. There again the user selects if he is having that symptom or not. Some of the examples are (fever, runny nose, scratchy throat, body and head ache). It should also contain Submit and Clear buttons, with Submit Button it will show the entered information in the second activity.  Now, with Clear Button it will allow the user to clear the form in the first activity. In the second activity, there will be a button to check whether the user should get him tested (if for more than 3 symptoms the user had said yes). Make sure that the app is robust across rotations.
 
